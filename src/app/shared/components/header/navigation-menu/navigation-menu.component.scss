@@ -18,6 +18,7 @@ button {
   font-size: 13px;
 }
 
-.active {
-  background-color: yellow;
+.no-hover:active, .no-hover:focus {
+  background-color: inherit;
+  color: inherit;
 }

@@ -1,0 +1,16 @@
+:host {
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+}
+
+.alert {
+  padding: 5px;
+  color: #da2727a6;
+  background-color: #464646;
+  border-color: transparent;
+  text-align: center;
+  border-radius: 0;
+}

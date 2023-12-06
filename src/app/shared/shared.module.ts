@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
@@ -12,7 +13,9 @@ import { IconButtonsComponent } from './components/header/icon-buttons/icon-butt
 import { LogoComponent } from './components/header/logo/logo.component';
 import { MobileMenuComponent } from './components/header/mobile-menu/mobile-menu.component';
 import { NavigationMenuComponent } from './components/header/navigation-menu/navigation-menu.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 import { CategoryPipe } from './pipes/category.pipe';
+import { FreeDeliveryBannerComponent } from './components/free-delivery-banner/free-delivery-banner.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,8 @@ import { CategoryPipe } from './pipes/category.pipe';
     NavigationMenuComponent,
     IconButtonsComponent,
     MobileMenuComponent,
+    ProductListComponent,
+    FreeDeliveryBannerComponent,
   ],
   imports: [
     CommonModule,
@@ -32,7 +37,8 @@ import { CategoryPipe } from './pipes/category.pipe';
     MatIconModule,
     NgbModule,
     MatMenuModule,
+    RouterModule,
   ],
-  exports: [HeaderComponent, CarouselComponent],
+  exports: [HeaderComponent, CarouselComponent, ProductListComponent, FreeDeliveryBannerComponent],
 })
 export class SharedModule {}
