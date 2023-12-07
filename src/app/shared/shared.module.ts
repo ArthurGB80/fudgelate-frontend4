@@ -8,14 +8,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import { ErrorDialogComponent } from './components/error-dialog/error-dialog.component';
+import { FooterComponentComponent } from './components/footer.component/footer.component.component';
+import { FreeDeliveryBannerComponent } from './components/free-delivery-banner/free-delivery-banner.component';
 import { HeaderComponent } from './components/header/header.component';
 import { IconButtonsComponent } from './components/header/icon-buttons/icon-buttons.component';
-import { LogoComponent } from './components/header/logo/logo.component';
+import { LogoComponent } from './components/logo/logo.component';
 import { MobileMenuComponent } from './components/header/mobile-menu/mobile-menu.component';
 import { NavigationMenuComponent } from './components/header/navigation-menu/navigation-menu.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { CategoryPipe } from './pipes/category.pipe';
-import { FreeDeliveryBannerComponent } from './components/free-delivery-banner/free-delivery-banner.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FreeDeliveryBannerComponent } from './components/free-delivery-banner/f
     MobileMenuComponent,
     ProductListComponent,
     FreeDeliveryBannerComponent,
+    FooterComponentComponent,
   ],
   imports: [
     CommonModule,
@@ -38,7 +40,14 @@ import { FreeDeliveryBannerComponent } from './components/free-delivery-banner/f
     NgbModule,
     MatMenuModule,
     RouterModule,
+    MatIconModule,
   ],
-  exports: [HeaderComponent, CarouselComponent, ProductListComponent, FreeDeliveryBannerComponent],
+  exports: [
+    HeaderComponent,
+    CarouselComponent,
+    ProductListComponent,
+    FreeDeliveryBannerComponent,
+    FooterComponentComponent,
+  ],
 })
 export class SharedModule {}
