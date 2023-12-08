@@ -17,6 +17,9 @@ import { MobileMenuComponent } from './components/header/mobile-menu/mobile-menu
 import { NavigationMenuComponent } from './components/header/navigation-menu/navigation-menu.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { CategoryPipe } from './pipes/category.pipe';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,9 @@ import { CategoryPipe } from './pipes/category.pipe';
     MatMenuModule,
     RouterModule,
     MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule
   ],
   exports: [
     HeaderComponent,

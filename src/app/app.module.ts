@@ -5,13 +5,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { AboutComponent } from './about/about.component';
 import { AccountComponent } from './account/account.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactFormComponent } from './contact/contact.component'; // Corrected here
 import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';
 import { SharedModule } from './shared/shared.module';
@@ -22,11 +27,10 @@ import { SharedModule } from './shared/shared.module';
     CartComponent,
     CheckoutComponent,
     HomeComponent,
-    ContactComponent,
+    ContactFormComponent,
     AboutComponent,
     InfoComponent,
     AccountComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,12 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
     NgbModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

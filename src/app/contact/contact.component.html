@@ -1,1 +1,29 @@
-<p>contact works!</p>
+<h1>Contato</h1>
+<p><mat-icon>phone</mat-icon> + 55 (11) 99999-9999 - (Whatsapp) </p>
+
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name" placeholder="Your name">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" placeholder="Your email">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Phone</mat-label>
+    <input matInput formControlName="phone" placeholder="Your phone number">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Message</mat-label>
+    <textarea matInput formControlName="message" placeholder="Your message"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
+
+<app-footer></app-footer>
+

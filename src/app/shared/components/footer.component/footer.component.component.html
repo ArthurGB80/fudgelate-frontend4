@@ -4,10 +4,7 @@
       <a routerLink="/home">
         <img class="footer-logo" src="assets/img/logos/fudgelate-logo.jpg" alt="Logo">
       </a>
-      <div class="newsletter">
-        <input type="email" placeholder="Sign up for our newsletter">
-        <button type="submit">Subscribe</button>
-      </div>
+
       <div class="social-icons">
         <a href="https://www.facebook.com/profile.php?id=100011400432404"><mat-icon>facebook</mat-icon></a>
         <a href="https://instagram.com/fudge.late?igshid=MmVlMjlkMTBhMg=="><mat-icon
@@ -19,18 +16,27 @@
       <p> +55 (11) 9400-10815</p>
     </div>
 
+    <div class="subscribe-container">
+      <div class="input-button-wrapper">
+        <mat-form-field appearance="outline">
+          <mat-label>Email address</mat-label>
+          <input matInput placeholder="name@example.com">
+        </mat-form-field>
+        <button mat-raised-button (click)="subscribe()">Subscribe</button>
+      </div>
+    </div>
+
+    <div class="security-img">
+      <img src="/assets/img/footer-img/site_seguro.png" alt="Secure Buy">
+    </div>
 
     <div class="footer-links">
-      <a routerLink="Politica">Política de Privacidade</a>
+      <a routerLink="Politica">Política de Privacidade</a><br>
       <a routerLink="Termos">Termo de Serviços</a>
     </div>
 
     <div class="credit-card-icons">
 
-    </div>
-
-    <div class="security-img">
-      <img src="/assets/img/footer-img/site_seguro.png" alt="Secure Buy">
     </div>
 
     <div class="footer-copyright">
