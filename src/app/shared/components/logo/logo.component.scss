@@ -1,10 +1,21 @@
-.logo {
+.logo-container {
   display: flex;
   align-items: center;
+}
+
+.logo {
   margin-right: 35px;
 }
 
 .logo img {
   height: 60px;
   width: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .logo img {
+    height: 50px;
+    margin-right: 15px;
+    margin-left: 65px;
+  }
 }

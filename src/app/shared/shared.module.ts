@@ -54,6 +54,11 @@ import { MatButtonModule } from '@angular/material/button';
     ProductListComponent,
     FreeDeliveryBannerComponent,
     FooterComponentComponent,
+    LogoComponent,
+    NavigationMenuComponent,
+    IconButtonsComponent,
+    MobileMenuComponent,
+  
   ],
 })
 export class SharedModule {}

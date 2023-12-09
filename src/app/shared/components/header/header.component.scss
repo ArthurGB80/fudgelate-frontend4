@@ -10,3 +10,21 @@
   height: 80px;
 }
 
+@media screen and (max-width: 600px) {
+  .menu-items {
+    display: none;
+  }
+
+  .mat-toolbar {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 70px;
+  }
+
+}

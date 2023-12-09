@@ -3,26 +3,26 @@
 
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
   <mat-form-field appearance="fill">
-    <mat-label>Name</mat-label>
-    <input matInput formControlName="name" placeholder="Your name">
+    <mat-label>Nome</mat-label>
+    <input matInput formControlName="name" placeholder="Seu nome">
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Email</mat-label>
-    <input matInput formControlName="email" placeholder="Your email">
+    <input matInput formControlName="email" placeholder="Seu email">
   </mat-form-field>
 
   <mat-form-field appearance="fill">
-    <mat-label>Phone</mat-label>
-    <input matInput formControlName="phone" placeholder="Your phone number">
+    <mat-label>Telefone</mat-label>
+    <input matInput formControlName="phone" placeholder="Seu telefone">
   </mat-form-field>
 
   <mat-form-field appearance="fill">
-    <mat-label>Message</mat-label>
-    <textarea matInput formControlName="message" placeholder="Your message"></textarea>
+    <mat-label>Messagem</mat-label>
+    <textarea matInput formControlName="messagem" placeholder="Sua messagem"></textarea>
   </mat-form-field>
 
-  <button mat-raised-button color="primary" type="submit">Submit</button>
+  <button mat-raised-button color="primary" type="submit">Enviar</button>
 </form>
 
 <app-footer></app-footer>
