@@ -58,7 +58,9 @@ import { MatButtonModule } from '@angular/material/button';
     NavigationMenuComponent,
     IconButtonsComponent,
     MobileMenuComponent,
-  
+    MatIconModule,
+    MatToolbarModule,
+
   ],
 })
 export class SharedModule {}
