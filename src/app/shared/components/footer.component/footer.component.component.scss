@@ -1,19 +1,28 @@
 footer {
   background-color: #FFF3E0;
-  padding: 30px 0;
+  padding: 30px;
 }
 
 .footer-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 10px 10px;
 }
 
-.logo-and-socials {
+.footer-logo {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.footer-logo-img {
+  max-width: 100px;
+}
+
+.socials {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,9 +30,7 @@ footer {
   width: 100%;
 }
 
-.instagram-icon {
-  color: #000000;
-}
+
 
 footer ::ng-deep .footer-logo {
   max-width: 100px;
@@ -49,7 +56,7 @@ footer ::ng-deep .footer-logo {
 .tel {
   text-align: center;
   width: 100%;
-  margin-top: 3px;
+  margin-top: 10px;
   margin-bottom: 3px;
 }
 

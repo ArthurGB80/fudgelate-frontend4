@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Renderer2, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +8,13 @@ import { Component, HostListener } from '@angular/core';
 export class HeaderComponent {
   isMobile = false;
   menuOpen = false;
+  isScrolled = false;
+  hideNavbar = false;
+  lastScrollTop = 0;
+  isScrollingDown = false;
+  currentScrollTop = 0; 
 
-  constructor() {
+  constructor(private renderer: Renderer2, private el: ElementRef) {
     this.checkScreenSize();
   }
 
@@ -29,5 +34,30 @@ export class HeaderComponent {
 
   onProdutosClick(): void {
     console.log('Produtos button clicked');
+  }
+
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    this.currentScrollTop = window.scrollY; // Update this line
+    const navbar = this.el.nativeElement.querySelector('mat-toolbar');
+
+    if (this.currentScrollTop > this.lastScrollTop && this.currentScrollTop > 100) {
+      // Scrolling down
+      this.isScrollingDown = true;
+      this.renderer.removeClass(navbar, 'navbar-transparent');
+      this.renderer.addClass(navbar, 'navbar-opaque');
+      this.renderer.addClass(navbar, 'navbar-hidden');
+    } else if (this.currentScrollTop < this.lastScrollTop && this.isScrollingDown) {
+      // Scrolling up
+      this.isScrollingDown = false;
+      this.renderer.removeClass(navbar, 'navbar-hidden');
+      this.renderer.addClass(navbar, 'navbar-opaque');
+    } else if (this.currentScrollTop <= 0) {
+      // At the top of the page
+      this.renderer.removeClass(navbar, 'navbar-opaque');
+      this.renderer.addClass(navbar, 'navbar-transparent');
+    }
+
+    this.lastScrollTop = this.currentScrollTop <= 0 ? 0 : this.currentScrollTop; // For Mobile or negative scrolling
   }
 }

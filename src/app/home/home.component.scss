@@ -1,0 +1,12 @@
+#myVideo {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  bottom: 60px;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  transform: scale(1); /* Adjust this value as needed */
+  object-fit: none; /* Adjust this value as needed */
+
+}

@@ -1,13 +1,26 @@
 .mat-toolbar {
   position: fixed;
-  top: 32px;
+  top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 100;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 0;
   height: 80px;
+  background-color: transparent;
+  transition: top 0.3s, background-color 0.3s;
+  margin-top: 30px;
+}
+
+.mat-toolbar.navbar-transparent {
+  background-color: transparent;
+}
+
+.mat-toolbar.navbar-opaque {
+  background-color: #FFE0B2;  /* replace with your desired color */
+}
+
+.mat-toolbar.navbar-hidden {
+  top: -30px; /* Adjust this value to match the height of your navbar */
 }
 
 @media screen and (max-width: 600px) {
@@ -25,6 +38,10 @@
     align-items: center;
     margin: 0;
     height: 70px;
+    background-color: transparent;
+
   }
+
+
 
 }

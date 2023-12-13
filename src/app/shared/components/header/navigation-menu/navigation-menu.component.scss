@@ -1,20 +1,19 @@
 .mat-toolbar {
   position: fixed;
-  top: 0;
+  top: 32px;
   width: 100%;
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 50;
-  height: 80px;
+  height: 200px;
 }
 
 button {
   margin: 0 10px;
   background-color: transparent;
   border: none;
-  box-shadow: none;
+  box-shadow: inset;
   font-size: 13px;
 }
 
