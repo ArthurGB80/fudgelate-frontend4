@@ -3,7 +3,7 @@
 @include mat-core();
 
 $custom-app-primary: mat-palette($mat-orange, 200);
-$custom-app-secondary: mat-palette($mat-orange, 200);
+$custom-app-secondary: mat-palette($mat-orange, 600);
 $custom-app-warn: mat-palette($mat-red);
 
 $custom-theme: mat-light-theme($custom-app-primary, $custom-app-secondary,  $custom-app-warn);
@@ -16,11 +16,18 @@ body {
 }
 
 body {
-  margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: #FFE0B2;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
 }
 
-body {
-  padding-top: 80px; /* Adjust this value based on the height of your header */
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
 }

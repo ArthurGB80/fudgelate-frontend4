@@ -12,7 +12,7 @@ export class HeaderComponent {
   hideNavbar = false;
   lastScrollTop = 0;
   isScrollingDown = false;
-  currentScrollTop = 0; 
+  currentScrollTop = 0;
 
   constructor(private renderer: Renderer2, private el: ElementRef) {
     this.checkScreenSize();
@@ -21,7 +21,7 @@ export class HeaderComponent {
   @HostListener('window:resize')
   checkScreenSize() {
     const width = window.innerWidth;
-    if (width <= 600) {
+    if (width <= 900) {
       this.isMobile = true;
     } else {
       this.isMobile = false;
@@ -38,7 +38,7 @@ export class HeaderComponent {
 
   @HostListener('window:scroll')
   onWindowScroll() {
-    this.currentScrollTop = window.scrollY; // Update this line
+    this.currentScrollTop = window.scrollY; 
     const navbar = this.el.nativeElement.querySelector('mat-toolbar');
 
     if (this.currentScrollTop > this.lastScrollTop && this.currentScrollTop > 100) {

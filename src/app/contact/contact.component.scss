@@ -14,14 +14,15 @@ button {
   align-self: center;
   margin-top: 0px;
   margin-bottom: 35px;
+
 }
 
 h1 {
   text-align: center;
-  font-size: 1em;
   color: #333;
   margin-bottom: 20px;
-  margin-top: 50px;
+  margin-top: -140px;
+
 }
 
 p {
@@ -31,12 +32,15 @@ p {
   margin-bottom: 20px;
 }
 
-mat-icon {
-  vertical-align: middle;
-  margin-right: 5px;
+.image1 {
+  width: 100%;
+  transform: scale(0.5, 0.5);
+  margin-top: -150px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
 }
 
-.material-icons {
-  font-family: 'Material Icons' !important;
-}
+
 

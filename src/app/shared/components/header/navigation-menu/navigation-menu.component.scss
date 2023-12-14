@@ -1,23 +1,5 @@
-.mat-toolbar {
-  position: fixed;
-  top: 32px;
-  width: 100%;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-}
-
 button {
   margin: 0 10px;
-  background-color: transparent;
-  border: none;
-  box-shadow: inset;
-  font-size: 13px;
 }
 
-.no-hover:active, .no-hover:focus {
-  background-color: inherit;
-  color: inherit;
-}
+
