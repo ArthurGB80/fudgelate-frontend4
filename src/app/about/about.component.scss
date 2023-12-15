@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 110px;
+  margin-top: 165px;
 }
 
 .header-section {
@@ -30,7 +30,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 5em;
+  font-size: 4em;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -44,7 +44,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 5em;
+  font-size: 4em;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -69,6 +69,7 @@
   h2 {
     align-items: center;
     font-weight: 1000;
+    font-size: 1.5em;
     text-transform: uppercase;
   }
 

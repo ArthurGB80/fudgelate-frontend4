@@ -6,15 +6,12 @@ import { CartComponent } from './cart/cart.component';
 import { ContactFormComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';
+import { ProductpageComponent } from './productpage/productpage.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  {
-    path: 'products',
-    loadChildren: () =>
-      import('./products/products.module').then((m) => m.ProductsModule),
-  },
+  { path: 'products',component: ProductpageComponent },
   { path: 'cart', component: CartComponent },
   { path: 'contact', component: ContactFormComponent },
   { path: 'about', component: AboutComponent },

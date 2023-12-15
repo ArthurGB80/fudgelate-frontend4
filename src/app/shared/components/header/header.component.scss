@@ -5,10 +5,10 @@
   z-index: 100;
   display: flex;
   justify-content: center;
-  height: 80px;
+  height: 130px;
   background-color: transparent;
   transition: top 0.5s, background-color 0.5s;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
 .mat-toolbar.navbar-transparent {
@@ -20,10 +20,10 @@
 }
 
 .mat-toolbar.navbar-hidden {
-  top: -30px; 
+  top: -35px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .menu-items {
     display: none;
   }

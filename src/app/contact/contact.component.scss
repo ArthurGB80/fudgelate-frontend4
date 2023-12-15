@@ -3,7 +3,7 @@ form {
   flex-direction: column;
   max-width: 600px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 mat-form-field {
@@ -14,33 +14,50 @@ button {
   align-self: center;
   margin-top: 0px;
   margin-bottom: 35px;
-
-}
-
-h1 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 20px;
-  margin-top: -140px;
-
 }
 
 p {
   text-align: center;
   font-size: 1.2em;
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .image1 {
+  position: relative;
   width: 100%;
-  transform: scale(0.5, 0.5);
-  margin-top: -150px;
+  transform: scale(0.3, 0.3);
+  margin-top: -55px;
   align-items: center;
   justify-content: center;
   display: flex;
+  margin-bottom: -200px;
+
+  img {
+    border-radius: 100px;
+  }
 
 }
 
+.whatsapp-link {
+  color: black;
+  text-decoration: none;
+}
 
+.whatsapp-link:hover {
+  color: #FFB74D;
+}
 
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 8em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-style: italic;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

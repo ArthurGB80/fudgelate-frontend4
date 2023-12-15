@@ -20,6 +20,7 @@ import { ContactFormComponent } from './contact/contact.component'; // Corrected
 import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';
 import { SharedModule } from './shared/shared.module';
+import { ProductpageComponent } from './productpage/productpage.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SharedModule } from './shared/shared.module';
     AboutComponent,
     InfoComponent,
     AccountComponent,
+    ProductpageComponent,
   ],
   imports: [
     BrowserModule,
