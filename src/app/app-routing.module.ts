@@ -7,6 +7,7 @@ import { ContactFormComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';
 import { ProductpageComponent } from './productpage/productpage.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'info', component: InfoComponent },
   { path: 'account', component: AccountComponent },
+  { path: 'register', component: RegisterComponent },
 ];
 
 @NgModule({

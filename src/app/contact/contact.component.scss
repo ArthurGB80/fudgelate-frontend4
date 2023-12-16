@@ -6,14 +6,22 @@ form {
   margin-top: 0px;
 }
 
+.Icon-and-tel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 mat-form-field {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 button {
   align-self: center;
   margin-top: 0px;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 p {
@@ -27,11 +35,12 @@ p {
   position: relative;
   width: 100%;
   transform: scale(0.3, 0.3);
-  margin-top: -55px;
   align-items: center;
   justify-content: center;
   display: flex;
+  margin-top: -60px;
   margin-bottom: -200px;
+
 
   img {
     border-radius: 100px;

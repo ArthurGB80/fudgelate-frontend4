@@ -1,0 +1,17 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <h1 mat-dialog-title class="mat-dialog-title">Login</h1>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" placeholder="Your email">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" formControlName="password" placeholder="Your password">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Login</button>
+
+  <p class="create-account"> <a (click)="createAccount()">Cadastre-se</a></p>
+</form>

@@ -21,6 +21,7 @@ import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';
 import { SharedModule } from './shared/shared.module';
 import { ProductpageComponent } from './productpage/productpage.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ProductpageComponent } from './productpage/productpage.component';
     InfoComponent,
     AccountComponent,
     ProductpageComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

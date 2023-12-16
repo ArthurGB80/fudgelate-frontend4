@@ -3,7 +3,8 @@ form {
   flex-direction: column;
   max-width: 300px;
   width: 100%;
-  margin: 180px auto 0 auto;
+  margin: 180px auto;
+  margin-bottom: 35px;
 }
 
 h1 {
@@ -18,10 +19,6 @@ mat-form-field {
 }
 
 button {
-  margin-top: 20px;
-}
+  margin-top: 20px ;
 
-.create-account {
-  text-align: center;
-  margin-top: 20px;
 }
