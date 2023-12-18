@@ -1,6 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
@@ -12,14 +15,13 @@ import { FooterComponentComponent } from './components/footer.component/footer.c
 import { FreeDeliveryBannerComponent } from './components/free-delivery-banner/free-delivery-banner.component';
 import { HeaderComponent } from './components/header/header.component';
 import { IconButtonsComponent } from './components/header/icon-buttons/icon-buttons.component';
-import { LogoComponent } from './components/logo/logo.component';
 import { MobileMenuComponent } from './components/header/mobile-menu/mobile-menu.component';
 import { NavigationMenuComponent } from './components/header/navigation-menu/navigation-menu.component';
+import { LogoComponent } from './components/logo/logo.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { CategoryPipe } from './pipes/category.pipe';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { MatButtonModule } from '@angular/material/button';
     ProductListComponent,
     FreeDeliveryBannerComponent,
     FooterComponentComponent,
-  ],
+    ProductDetailComponent,
+      ],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -46,7 +49,11 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    
+    
+
   ],
   exports: [
     HeaderComponent,
@@ -60,6 +67,7 @@ import { MatButtonModule } from '@angular/material/button';
     MobileMenuComponent,
     MatIconModule,
     MatToolbarModule,
+    ProductDetailComponent,
 
   ],
 })

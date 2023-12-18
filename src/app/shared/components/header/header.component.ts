@@ -41,7 +41,7 @@ export class HeaderComponent {
     this.currentScrollTop = window.scrollY; 
     const navbar = this.el.nativeElement.querySelector('mat-toolbar');
 
-    if (this.currentScrollTop > this.lastScrollTop && this.currentScrollTop > 100) {
+    if (this.currentScrollTop > this.lastScrollTop && this.currentScrollTop > 50) {
       // Scrolling down
       this.isScrollingDown = true;
       this.renderer.removeClass(navbar, 'navbar-transparent');

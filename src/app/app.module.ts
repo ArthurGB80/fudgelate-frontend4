@@ -44,7 +44,6 @@ import { RegisterComponent } from './register/register.component';
     SharedModule,
     NgbModule,
     RouterModule,
-    SharedModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,

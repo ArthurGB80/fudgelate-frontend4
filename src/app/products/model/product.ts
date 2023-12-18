@@ -7,4 +7,6 @@ export class Product {
   category: string = '';
   inventoryCount: number = 0;
   rating: number = 0;
+  expiryDate: string = '';
+  weight: number = 0;
 }

@@ -2,13 +2,13 @@
   <div class="row">
     <div class="col-md-3" *ngFor="let product of products">
       <div class="card">
-        <a [routerLink]="['/product', product._id]">
+        <a [routerLink]="['/product-detail', product._id]">
           <img class="card-img-top zoom" [src]="product.imageUrl" alt="Card image cap">
         </a>
         <div class="card-body">
           <h5 class="card-title">{{product.name}}</h5>
           <p class="card-text">{{product.price | currency:'BRL':'symbol':'1.2-2'}}</p>
-          <a [routerLink]="['/product', product._id]" class="btn btn-primary">
+          <a [routerLink]="['/product-detail', product._id]" class="btn btn-primary">
             Comprar
           </a>
         </div>
