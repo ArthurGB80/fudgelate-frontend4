@@ -22,6 +22,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { CategoryPipe } from './pipes/category.pipe';
 import { MatCardModule } from '@angular/material/card';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -51,9 +52,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    
-    
-
+    FormsModule,
   ],
   exports: [
     HeaderComponent,

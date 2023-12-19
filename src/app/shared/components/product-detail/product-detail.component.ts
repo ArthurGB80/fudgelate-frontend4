@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../../../products/model/product';
 import { ProductsService } from '../../../products/services/products.service';
+import { CartService } from '../../../products/services/cart.service';
+import { CartItem } from 'src/app/products/model/cart-item.model';
 
 @Component({
   selector: 'app-product-detail',
@@ -13,12 +15,13 @@ export class ProductDetailComponent implements OnInit {
   showZoom = false;
   mouseX = 0;
   mouseY = 0;
-  backgroundPosition = '0% 0%'; 
+  backgroundPosition = '0% 0%';
 
 
   constructor(
     private route: ActivatedRoute,
-    private productsService: ProductsService
+    private productsService: ProductsService,
+    private cartService: CartService
   ) {}
 
   ngOnInit(): void {
@@ -36,13 +39,25 @@ export class ProductDetailComponent implements OnInit {
   onMouseMove(event: MouseEvent) {
     const { offsetX, offsetY, target } = event;
     const { offsetWidth, offsetHeight } = target as HTMLElement;
-    
+
     const x = (offsetX / offsetWidth) * 100;
     const y = (offsetY / offsetHeight) * 100;
-  
+
     this.mouseX = offsetX + 150; // adjust these values as needed
     this.mouseY = offsetY - 50; // adjust these values as needed
-  
+
     this.backgroundPosition = `${x}% ${y}%`;
+  }
+
+  buyProduct(): void {
+    if (this.product) {
+      const cartItem = new CartItem();
+      cartItem.id = this.product._id;
+      cartItem.name = this.product.name;
+      cartItem.price = this.product.price;
+      cartItem.quantity = 1; // or the selected quantity
+
+      this.cartService.addToCart(cartItem);
+    }
   }
 }

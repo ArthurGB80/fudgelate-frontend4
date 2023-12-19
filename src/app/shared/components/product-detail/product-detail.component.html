@@ -5,8 +5,8 @@
     (mouseleave)="showZoom = false" (mousemove)="onMouseMove($event)">
   </div>
   <div class="zoom-box" *ngIf="showZoom" [style.backgroundImage]="'url(' + product.imageUrl + ')'"
-  [style.left.px]="mouseX" [style.top.px]="mouseY" [style.backgroundPosition]="backgroundPosition">
-</div>
+    [style.left.px]="mouseX" [style.top.px]="mouseY" [style.backgroundPosition]="backgroundPosition">
+  </div>
 
   <div class="product-details">
     <mat-card-title>{{ product.name }}</mat-card-title>
@@ -24,7 +24,7 @@
         <mat-label></mat-label>
         <input matInput type="number" min="1" max="100" step="1">
       </mat-form-field>
-      <button mat-raised-button color="primary">Comprar</button>
+      <button mat-raised-button color="primary" (click)="buyProduct()">Comprar</button>
     </div>
     <div class="product-category">Categoria: {{ product.category }}</div>
   </div>

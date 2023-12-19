@@ -8,9 +8,10 @@
         <div class="card-body">
           <h5 class="card-title">{{product.name}}</h5>
           <p class="card-text">{{product.price | currency:'BRL':'symbol':'1.2-2'}}</p>
-          <a [routerLink]="['/product-detail', product._id]" class="btn btn-primary">
+          <button mat-raised-button color="primary" [routerLink]="['/product-detail', product._id]"
+            (click)="buyProduct(product)">
             Comprar
-          </a>
+          </button>
         </div>
       </div>
     </div>
