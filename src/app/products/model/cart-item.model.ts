@@ -8,5 +8,4 @@ export class CartItem {
   discount: number = 0;
   subtotal: number = 0;
   total: number = 0;
-  randomImageUrl?: string;
 }

@@ -28,6 +28,6 @@ export class ProductListComponent implements OnInit {
     cartItem.price = product.price;
     cartItem.quantity = 1; // or the selected quantity
 
-    this.cartService.addToCart(cartItem);
+    this.cartService.addToCart(product, cartItem.quantity);
   }
 }

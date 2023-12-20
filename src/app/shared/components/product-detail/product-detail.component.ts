@@ -57,7 +57,6 @@ export class ProductDetailComponent implements OnInit {
       cartItem.price = this.product.price;
       cartItem.quantity = 1; // or the selected quantity
 
-      this.cartService.addToCart(cartItem);
-    }
+      this.cartService.addToCart(this.product, cartItem.quantity);    }
   }
 }

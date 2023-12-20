@@ -2,47 +2,64 @@
 
 <div class="container">
   <h1>Carrinho</h1>
-  <div class="min-order" *ngIf="subtotal <= 50 && cartItems.length > 0" >
-  <p>The minimum order is R$50.00, your order is R$ {{ subtotal }}.</p>
+  <div class="min-order" *ngIf="subtotal <= 50 && cartItems.length > 0">
+    <p>The minimum order is R$50.00, your order is R$ {{ subtotal }}.</p>
   </div>
   <div *ngIf="cartItems.length > 0; else emptyCart">
-    <table>
-      <tr *ngFor="let item of cartItems">
-        <td><button mat-button (click)="removeFromCart(item)">x</button></td>
-        <td><img [src]="item.randomImageUrl" alt="{{item.name}}"></td>
-        <td>{{ subtotal }}</td>
-        <td>{{ item.name }}</td>
-        <td>{{ item.price }}</td>
-        <!-- <td><input type="number" [(ngModel)]="item.quantity"></td> -->
-        <td>{{ item.price * item.quantity }}</td>
-      </tr>
-    </table>
-    <div>
-      <input type="text" placeholder="Coupon code">
-      <button mat-button>Add</button>
-      <button mat-button>Update Cart</button>
-    </div>
-    <div class="summary">
-      <div class="suggestion">
-        <app-product-card></app-product-card>
-      </div>
+    <div class="inner-container">
       <table>
         <tr>
-          <td>Subtotal</td>
-          <td>{{ subtotal }}</td>
+          <th></th>
+          <th></th>
+          <th>Nome</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+          <th>Total</th>
         </tr>
-        <tr>
-          <td>Delivery</td>
-          <td><button mat-button>Calculate Shipping</button></td>
-        </tr>
-        <tr>
-          <td>Total</td>
-          <td>{{ total }}</td>
+        <tr *ngFor="let item of cartItems">
+          <td><button mat-button (click)="removeOneFromCart(item)">x</button></td>
+          <td><img [src]="item.imageUrl" alt="{{ item.name }}"></td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.price }}</td>
+          <td>
+            <input type="number" [(ngModel)]="item.quantity">
+          </td>
+          <td>{{ item.price * item.quantity }}</td>
         </tr>
       </table>
+      <div>
+      </div>
+      <div class="coupon">
+        <input type="text" placeholder="Código do Cupom">
+        <button mat-button>Adicionar Cupom</button>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="summary">
+      <div class="flex-container">
+
+        <div class="suggestion">
+          <app-product-card></app-product-card>
+        </div>
+        <table>
+          <tr>
+            <td>Subtotal</td>
+            <td>{{ subtotal }}</td>
+          </tr>
+          <tr>
+            <td>Delivery</td>
+            <td><button mat-button>Calcular Entrega</button></td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>{{ total }}</td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
   <ng-template #emptyCart>
-    <p>Carrinho vazio.</p>
+    <p class="empty-cart" color="primary">Voce não tem itens no carrinho.</p>
+    <app-product-list></app-product-list>
   </ng-template>
 </div>

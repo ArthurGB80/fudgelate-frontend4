@@ -5,8 +5,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -19,10 +20,10 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { ContactFormComponent } from './contact/contact.component'; // Corrected here
 import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';
-import { SharedModule } from './shared/shared.module';
 import { ProductpageComponent } from './productpage/productpage.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,8 @@ import { ProductCardComponent } from './shared/components/product-card/product-c
     MatInputModule,
     MatButtonModule,
     MatIconModule,
+    MatDividerModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
