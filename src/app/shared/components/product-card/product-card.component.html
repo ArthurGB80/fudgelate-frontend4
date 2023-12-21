@@ -1,16 +1,19 @@
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{product.name}}</mat-card-title>
-    <mat-card-subtitle>{{product.price | currency:'BRL':'symbol':'1.2-2'}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image [src]="product.imageUrl" alt="Card image cap">
-  <mat-card-content>
-    <p>
-      <!-- You can add a description for the product here -->
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button [routerLink]="['/product-detail', product._id]" (click)="buyProduct(product)">Comprar</button>
-  </mat-card-actions>
-</mat-card>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card">
+        <a [routerLink]="['/product-detail', product._id]">
+          <img class="card-img-top zoom" [src]="product.imageUrl" alt="Card image cap">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text">{{product.price | currency:'BRL':'symbol':'1.2-2'}}</p>
+          <button mat-raised-button color="primary" [routerLink]="['/product-detail', product._id]"
+            (click)="buyProduct()">
+            Comprar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,8 +2,8 @@
 
 <div class="container">
   <h1>Carrinho</h1>
-  <div class="min-order" *ngIf="subtotal <= 50 && cartItems.length > 0">
-    <p>The minimum order is R$50.00, your order is R$ {{ subtotal }}.</p>
+  <div class="min-order" *ngIf="cartItems.length > 0">
+    <p>O pedido mínimo é de R$50,00, seu pedido é de R$ {{ subtotal }}.</p>
   </div>
   <div *ngIf="cartItems.length > 0; else emptyCart">
     <div class="inner-container">
@@ -14,7 +14,7 @@
           <th>Nome</th>
           <th>Preço</th>
           <th>Quantidade</th>
-          <th>Total</th>
+          <th>Subtotal</th>
         </tr>
         <tr *ngFor="let item of cartItems">
           <td><button mat-button (click)="removeOneFromCart(item)">x</button></td>

@@ -26,7 +26,7 @@ export class ProductListComponent implements OnInit {
     cartItem.id = product._id;
     cartItem.name = product.name;
     cartItem.price = product.price;
-    cartItem.quantity = 1; // or the selected quantity
+    cartItem.quantity = 1; 
 
     this.cartService.addToCart(product, cartItem.quantity);
   }

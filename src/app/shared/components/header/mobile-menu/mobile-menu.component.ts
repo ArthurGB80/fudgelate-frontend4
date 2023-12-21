@@ -9,22 +9,14 @@ export class MobileMenuComponent implements OnInit {
   isMobile: boolean = false;
 
   constructor() {
-    this.checkScreenSize();
+    this.isMobile = window.innerWidth <= 900;
   }
 
   ngOnInit() {}
 
-  @HostListener('window:resize')
-  checkScreenSize() {
-    const width = window.innerWidth;
-    if (width <= 600) {
-      this.isMobile = true;
-    } else {
-      this.isMobile = false;
-    }
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.isMobile = (event.target as Window).innerWidth <= 900;
   }
 
-  onProdutosClick(): void {
-    console.log('Produtos button clicked');
-  }
 }

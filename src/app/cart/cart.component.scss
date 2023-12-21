@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   h1 {
     font-size: 4em;
     text-align: center;
@@ -33,7 +33,14 @@ inner-container {
 
 .flex-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 20px;
+
+
 
 }
 
@@ -112,4 +119,8 @@ mat-button {
 }
 .coupon input {
   margin-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+
 }

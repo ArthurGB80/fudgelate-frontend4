@@ -111,20 +111,25 @@
 }
 
 @media screen and (max-width: 600px) {
-  .menu-items {
-    display: none;
+  .about-page {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-section {
+    font-size: 0.8em;
   }
 
   .mat-toolbar {
     position: fixed;
-    top: 50px;
+    top: 0px;
     width: 100%;
     z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
-    height: 70px;
+    height: 100px;
   }
 
   .content-section {
@@ -134,14 +139,14 @@
   .image1 img {
     width: 100%;
     height: auto;
-    margin-top: 40px;
+    margin-top: 0px;
   }
 
   .image-text {
     font-size: 2.3em;
     align-items: center;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
   }
@@ -177,7 +182,7 @@
   }
 
   .image2 {
-    width: 100%;
+    width: 50%;
     display: flex;
     align-items: center;
     order: 2;

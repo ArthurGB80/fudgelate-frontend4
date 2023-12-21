@@ -21,7 +21,7 @@ export class HeaderComponent {
   @HostListener('window:resize')
   checkScreenSize() {
     const width = window.innerWidth;
-    if (width <= 900) {
+    if (width <= 700) {
       this.isMobile = true;
     } else {
       this.isMobile = false;
@@ -38,10 +38,10 @@ export class HeaderComponent {
 
   @HostListener('window:scroll')
   onWindowScroll() {
-    this.currentScrollTop = window.scrollY; 
+    this.currentScrollTop = window.scrollY;
     const navbar = this.el.nativeElement.querySelector('mat-toolbar');
 
-    if (this.currentScrollTop > this.lastScrollTop && this.currentScrollTop > 50) {
+    if (this.currentScrollTop > this.lastScrollTop && this.currentScrollTop > 30) {
       // Scrolling down
       this.isScrollingDown = true;
       this.renderer.removeClass(navbar, 'navbar-transparent');

@@ -19,6 +19,7 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.cartItems = this.cartService.cartItems;
     this.total = this.cartService.calculateTotal();
+    this.subtotal = this.cartService.subtotal;
   }
 
   addToCart(item: CartItem): void {
@@ -28,13 +29,16 @@ export class CartComponent implements OnInit {
     product.price = item.price;
     product.imageUrl = item.imageUrl;
     // set other properties as needed...
-  
+
     this.cartService.addToCart(product, item.quantity);
     this.total = this.cartService.calculateTotal();
+    this.subtotal = this.cartService.subtotal;
   }
 
   removeOneFromCart(item: CartItem): void {
     this.cartService.removeOneFromCart(item);
+    this.cartItems = this.cartService.cartItems;
     this.total = this.cartService.calculateTotal();
+    this.subtotal = this.cartService.subtotal;
   }
 }
