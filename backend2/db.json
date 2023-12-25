@@ -1,36 +1,42 @@
 {
   "products": [
     {
-      "id": 1,
+      "_id": 1,
       "name": "fudge1",
       "description": "description 1",
       "price": 100,
       "imageUrl": "imageUrl 1",
       "category": "category 1",
       "inventoryCount": 1,
-      "soldCount": 0,
+      "rating": 4,
+      "expiryDate": " 12-31-2024",
+      "weight": 50,
       "active": true
     },
     {
-      "id": 2,
+      "_id": 2,
       "name": "fudge2",
       "description": "description 2",
       "price": 200,
       "imageUrl": "imageUrl 2",
       "category": "category 2",
       "inventoryCount": 1,
-      "soldCount": 0,
+      "rating": 4.5,
+      "expiryDate": " 12-31-2025",
+      "weight": 45,
       "active": true
     },
     {
-      "id": 3,
+      "_id": 3,
       "name": "fudge3",
       "description": "description 3",
       "price": 300,
       "imageUrl": "imageUrl 3",
       "category": "category 3",
       "inventoryCount": 1,
-      "soldCount": 0,
+      "rating": 0,
+      "expiryDate": "12-31-2025",
+      "weight": 40,
       "active": true
     }
   ]

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Product } from '../../../products/model/product';
-import { ProductsService } from '../../../products/services/products.service';
-import { CartService } from '../../../products/services/cart.service';
-import { CartItem } from 'src/app/products/model/cart-item.model';
+import { CartItem } from 'src/app/model/cart-item.model';
+import { Product } from '../../../model/product';
+import { CartService } from '../../../services/cart.service';
+import { ProductsService } from '../../../services/products.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -16,7 +16,6 @@ export class ProductDetailComponent implements OnInit {
   mouseX = 0;
   mouseY = 0;
   backgroundPosition = '0% 0%';
-
 
   constructor(
     private route: ActivatedRoute,
@@ -57,6 +56,7 @@ export class ProductDetailComponent implements OnInit {
       cartItem.price = this.product.price;
       cartItem.quantity = 1; // or the selected quantity
 
-      this.cartService.addToCart(this.product, cartItem.quantity);    }
+      this.cartService.addToCart(this.product, cartItem.quantity);
+    }
   }
 }

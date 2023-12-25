@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../../products/model/product';
-import { ProductsService } from '../../../products/services/products.service';
-import { CartService } from '../../../products/services/cart.service';
-import { CartItem } from 'src/app/products/model/cart-item.model';
+import { CartItem } from 'src/app/model/cart-item.model';
+import { Product } from '../../../model/product';
+import { CartService } from '../../../services/cart.service';
+import { ProductsService } from '../../../services/products.service';
 
 @Component({
   selector: 'app-product-card',
@@ -14,15 +14,15 @@ export class ProductCardComponent implements OnInit {
 
   constructor(
     private productsService: ProductsService,
-    private cartService: CartService,
+    private cartService: CartService
   ) {}
 
   ngOnInit(): void {
-    const products = this.productsService.getProducts();
-    const randomIndex = Math.floor(Math.random() * products.length);
-    this.product = products[randomIndex];
+    this.productsService.getProducts().subscribe((products) => {
+      const randomIndex = Math.floor(Math.random() * products.length);
+      this.product = products[randomIndex];
+    });
   }
-
   buyProduct(): void {
     const cartItem = new CartItem();
     cartItem.id = this.product._id;
