@@ -25,12 +25,12 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
-      const id = +params['id']; // convert id to number
+      const id = +params['id']; 
       const product = this.productsService.getProduct(id);
       if (product) {
         this.product = product;
       } else {
-        // handle error, e.g., assign a default value or show an error message
+
       }
     });
   }
@@ -42,8 +42,8 @@ export class ProductDetailComponent implements OnInit {
     const x = (offsetX / offsetWidth) * 100;
     const y = (offsetY / offsetHeight) * 100;
 
-    this.mouseX = offsetX + 150; // adjust these values as needed
-    this.mouseY = offsetY - 50; // adjust these values as needed
+    this.mouseX = offsetX + 150;
+    this.mouseY = offsetY - 50;
 
     this.backgroundPosition = `${x}% ${y}%`;
   }
@@ -54,7 +54,7 @@ export class ProductDetailComponent implements OnInit {
       cartItem.id = this.product._id;
       cartItem.name = this.product.name;
       cartItem.price = this.product.price;
-      cartItem.quantity = 1; // or the selected quantity
+      cartItem.quantity = 1;
 
       this.cartService.addToCart(this.product, cartItem.quantity);
     }

@@ -2,42 +2,51 @@
   "products": [
     {
       "_id": 1,
-      "name": "fudge1",
-      "description": "description 1",
+      "name": "Product 1",
       "price": 100,
-      "imageUrl": "imageUrl 1",
-      "category": "category 1",
-      "inventoryCount": 1,
-      "rating": 4,
-      "expiryDate": " 12-31-2024",
-      "weight": 50,
-      "active": true
+      "imageUrl": "https://raw.githubusercontent.com/ArthurGB80/fudgelate-frontend4/main/docs/assets/img/products/product1.png",
+      "description": "Várias casquinhas de brownie de chocolate em formato de tiras e dentro da lata mais famosa de todas, com um rótulo com as artes de Äline Besourö desenvolvidas para o livro “A História do Mal”.",
+      "category": "Category for Product 1",
+      "inventoryCount": 10,
+      "rating": 4.5,
+      "expiryDate": "2023-12-31",
+      "weight": 10
     },
     {
       "_id": 2,
-      "name": "fudge2",
-      "description": "description 2",
+      "name": "Product 2",
       "price": 200,
-      "imageUrl": "imageUrl 2",
-      "category": "category 2",
-      "inventoryCount": 1,
-      "rating": 4.5,
-      "expiryDate": " 12-31-2025",
-      "weight": 45,
-      "active": true
+      "imageUrl": "https://raw.githubusercontent.com/ArthurGB80/fudgelate-frontend4/main/docs/assets/img/products/product2.png",
+      "description": "Várias casquinhas de brownie de chocolate em formato de tiras e dentro da lata mais famosa de todas, com um rótulo com as artes de Äline Besourö desenvolvidas para o livro “A História do Mal”.",
+      "category": "Category for Product 2",
+      "inventoryCount": 20,
+      "rating": 5.5,
+      "expiryDate": "2023-12-31",
+      "weight": 20
     },
     {
       "_id": 3,
-      "name": "fudge3",
-      "description": "description 3",
+      "name": "Product 3",
       "price": 300,
-      "imageUrl": "imageUrl 3",
-      "category": "category 3",
-      "inventoryCount": 1,
-      "rating": 0,
-      "expiryDate": "12-31-2025",
-      "weight": 40,
-      "active": true
+      "imageUrl": "https://raw.githubusercontent.com/ArthurGB80/fudgelate-frontend4/main/docs/assets/img/products/product3.png",
+      "description": "Várias casquinhas de brownie de chocolate em formato de tiras e dentro da lata mais famosa de todas, com um rótulo com as artes de Äline Besourö desenvolvidas para o livro “A História do Mal”.",
+      "category": "Category for Product 3",
+      "inventoryCount": 30,
+      "rating": 6.5,
+      "expiryDate": "2023-12-31",
+      "weight": 30
+    },
+    {
+      "_id": 4,
+      "name": "Product 4",
+      "price": 400,
+      "imageUrl": "https://raw.githubusercontent.com/ArthurGB80/fudgelate-frontend4/main/docs/assets/img/products/product4.png",
+      "description": "Várias casquinhas de brownie de chocolate em formato de tiras e dentro da lata mais famosa de todas, com um rótulo com as artes de Äline Besourö desenvolvidas para o livro “A História do Mal”.",
+      "category": "Category for Product 5",
+      "inventoryCount": 50,
+      "rating": 7.5,
+      "expiryDate": "2023-12-31",
+      "weight": 40
     }
   ]
 }

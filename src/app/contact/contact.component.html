@@ -1,8 +1,8 @@
-
 <app-free-delivery-banner></app-free-delivery-banner>
 
 <div class="image1">
-  <img src="https://raw.githubusercontent.com/ArthurGB80/fudgelate-frontend4/main/src/assets/img/contact/fudge_esticada.jpg"
+  <img
+    src="https://raw.githubusercontent.com/ArthurGB80/fudgelate-frontend4/main/src/assets/img/contact/fudge_esticada.jpg"
     alt="About us image">
   <p class="image-text">Contato</p>
 </div>
@@ -25,22 +25,34 @@
   <mat-form-field appearance="fill">
     <mat-label>Nome</mat-label>
     <input matInput formControlName="name" placeholder="Seu nome">
+    <mat-error *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+      Nome é necessário
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Email</mat-label>
     <input matInput formControlName="email" placeholder="email@email.com.br">
+    <mat-error *ngIf="contactForm.get('email')?.errors?.['required'] && contactForm.get('email')?.touched">
+      Email é necessário
+    </mat-error>
+    <mat-error *ngIf="contactForm.get('email')?.errors?.['email'] && contactForm.get('email')?.touched">
+      Insira um email válido
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Telefone</mat-label>
-    <input matInput formControlName="phone" placeholder="Seu telefone">
+    <input matInput formControlName="phone" placeholder="Seu telefone" (input)="formatInput($event)">
+    <mat-error *ngIf="contactForm.get('phone')?.errors?.['pattern']">
+      Insira um telefone válido no formato (11) 22222-2222
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Messagem</mat-label>
-    <textarea matInput formControlName="messagem" placeholder="Sua messagem"></textarea>
+    <textarea matInput formControlName="message" placeholder="Sua messagem"></textarea>
   </mat-form-field>
-
+  
   <button mat-raised-button color="primary" type="submit">Enviar</button>
 </form>
